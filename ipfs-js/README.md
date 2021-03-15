@@ -66,7 +66,7 @@ To interact with the API, you need to have a local daemon running. It needs to b
 > ipfs config Addresses.API
 /ip4/127.0.0.1/tcp/5001
 # Set it if it does not match the above output
-> ipfs config Addresses.API /ip4/127.0.0.1/tcp/5001
+> ipfs config Addresses.API /ip4/178.62.228.107/tcp/5001
 # Restart the daemon after changing the config
 
 # Run the daemon
@@ -79,17 +79,17 @@ To interact with the API, you need to have a local daemon running. It needs to b
 var ipfsAPI = require('ipfs-api')
 
 // connect to ipfs daemon API server
-var ipfs = ipfsAPI('localhost', '5001', {protocol: 'http'}) // leaving out the arguments will default to these values
+var ipfs = ipfsAPI('178.62.228.107', '5001', {protocol: 'http'}) // leaving out the arguments will default to these values
 
 // or connect with multiaddr
-var ipfs = ipfsAPI('/ip4/127.0.0.1/tcp/5001')
+var ipfs = ipfsAPI('/ip4/178.62.228.107/tcp/5001')
 
 // or using options
-var ipfs = ipfsAPI({host: 'localhost', port: '5001', protocol: 'http'})
+var ipfs = ipfsAPI({host: '178.62.228.107', port: '5001', protocol: 'http'})
 ```
 ### Importing a sub-module and usage
 ```javascript
-const bitswap = require('ipfs-api/src/bitswap')('/ip4/127.0.0.1/tcp/5001')
+const bitswap = require('ipfs-api/src/bitswap')('/ip4/178.62.228.107/tcp/5001')
 
 bitswap.unwant(key, (err) => {
   // ...
@@ -135,7 +135,7 @@ crossorigin="anonymous"></script>
 CDN-based IPFS API provides the `IpfsApi` constructor as a method of the global `window` object. Example:
 
 ```
-var ipfs = window.IpfsApi('localhost', '5001')
+var ipfs = window.IpfsApi('178.62.228.107', '5001')
 ```
 
 If you omit the host and port, the API will parse `window.host`, and use this information. This also works, and can be useful if you want to write apps that can be run from multiple different gateways:
@@ -149,7 +149,7 @@ var ipfs = window.IpfsApi()
 In a web browser IPFS API (either browserified or CDN-based) might encounter an error saying that the origin is not allowed. This would be a CORS ("Cross Origin Resource Sharing") failure: IPFS servers are designed to reject requests from unknown domains by default. You can whitelist the domain that you are calling from by changing your ipfs config like this:
 
 ```bash
-$ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[\"http://example.com\"]"
+$ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Origin "[\"http://sccimo.com\"]"
 $ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Credentials "[\"true\"]"
 $ ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods "[\"PUT\", \"POST\", \"GET\"]"
 ```
