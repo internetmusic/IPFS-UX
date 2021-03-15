@@ -17,4 +17,4 @@ then in this folder run
 > npm start
 ```
 
-and open your browser at `http://localhost:8888`.
+and open your browser at `http://178.62.228.107:8888`.

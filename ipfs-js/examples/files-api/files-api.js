@@ -1,6 +1,6 @@
 'use strict'
 
-const ipfs = require('../../src')('localhost', 5001)
+const ipfs = require('../../src')('178.62.228.107', 5001)
 
 ipfs.files.ls('/folder1', function (err, res) {
   if (err) {

@@ -411,7 +411,7 @@ function setupConfig(){
     var config = loStartConfig;
     if(config === null){
         config = {
-            host:"localhost",
+            host:"178.62.228.107",
             APIPort:5001
         }
 

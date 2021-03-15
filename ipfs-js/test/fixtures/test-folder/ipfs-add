@@ -2,7 +2,7 @@
 
 'use strict'
 
-const ipfs = require('../src')('localhost', 5001)
+const ipfs = require('../src')('178.62.228.107', 5001)
 const files = process.argv.slice(2)
 
 ipfs.add(files, {recursive: true}, function (err, res) {

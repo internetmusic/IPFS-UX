@@ -1,6 +1,6 @@
 'use strict'
 
-const ipfs = require('../src')('localhost', 5001)
+const ipfs = require('../src')('178.62.228.107', 5001)
 
 const f1 = 'Hello'
 const f2 = 'World'

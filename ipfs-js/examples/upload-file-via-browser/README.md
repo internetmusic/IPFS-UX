@@ -27,7 +27,7 @@ Once the daemon is on, run the following commands within this folder:
 > npm start
 ```
 
-Now open your browser at `http://localhost:3000`
+Now open your browser at `http://178.62.228.107:3000`
 
 After uploading a file (left screen), and opening the uploaded file (right screen), you should see something like:
 

@@ -1,6 +1,6 @@
 'use strict'
 
-const ipfs = require('../src')('localhost', 5001)
+const ipfs = require('../src')('178.62.228.107', 5001)
 
 const hash = ['QmdbHK6gMiecyjjSoPnfJg6iKMF7v6E2NkoBgGpmyCoevh']
 
